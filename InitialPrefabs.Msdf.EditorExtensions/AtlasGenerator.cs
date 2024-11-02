@@ -199,7 +199,7 @@ namespace InitialPrefabs.Msdf.EditorExtensions {
                     return;
                 }
 
-                _ = new LibraryScope("msdf_atlas");
+                // _ = new LibraryScope("msdf_atlas");
 
                 var savePath = resourcePathProp.stringValue;
                 var fontPath = AssetDatabase.GetAssetPath(fontProp.objectReferenceValue);
@@ -224,6 +224,7 @@ namespace InitialPrefabs.Msdf.EditorExtensions {
                     var glyphData = data.glyph_data->ElementAt(i);
                     serializedFontData.Glyphs[i] = glyphData.ToRuntime();
                 }
+                // Release memory allocated on the heap that we no longer need.
                 NativeMethods.drop_byte_buffer(data.glyph_data);
                 var soPath = savePath[savePath.IndexOf("Assets")..] + $"{font.name}_MSDFAtlas.asset";
 
@@ -234,8 +235,6 @@ namespace InitialPrefabs.Msdf.EditorExtensions {
 
                 var relativeAtlasPath = savePath[savePath.IndexOf("Assets")..] + $"{font.name}_MSDFAtlas.png";
                 AssetDatabase.ImportAsset(relativeAtlasPath, ImportAssetOptions.ForceUpdate);
-                // Release memory allocated on the heap that we no longer need.
-                NativeMethods.drop_byte_buffer(data.glyph_data);
             });
         }
     }
