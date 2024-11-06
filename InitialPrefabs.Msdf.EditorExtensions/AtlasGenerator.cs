@@ -216,7 +216,7 @@ namespace InitialPrefabs.Msdf.EditorExtensions {
                     settings.GeneratorArgs);
 
                 var serializedFontData = CreateInstance<SerializedFontData>();
-                serializedFontData.FaceData = data.ToRuntimeFaceData();
+                serializedFontData.FaceData = data.ToRuntimeFaceData(settings.GeneratorArgs.range);
 
                 var size = data.glyph_data->ElementLen();
                 serializedFontData.Glyphs = new RuntimeGlyphData[size];

@@ -9,12 +9,13 @@ namespace InitialPrefabs.Msdf.EditorExtensions {
             return pointSize * Screen.dpi / fontData.units_per_em;
         }
 
-        public static RuntimeFaceData ToRuntimeFaceData(this ref FontData fontData) {
+        public static RuntimeFaceData ToRuntimeFaceData(this ref FontData fontData, float pixelRange) {
             return new RuntimeFaceData {
                 LineHeight = fontData.line_height,
                 UnitsPerEm = fontData.units_per_em,
                 AscentLine = fontData.ascender,
-                DescentLine = fontData.descender
+                DescentLine = fontData.descender,
+                PixelRange = pixelRange
             };
         }
     }

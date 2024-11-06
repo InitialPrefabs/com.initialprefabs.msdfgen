@@ -8,5 +8,6 @@ namespace InitialPrefabs.Msdf.Runtime {
         public float DescentLine;
         public int LineHeight;
         public uint UnitsPerEm;
+        public float PixelRange;
     }
 }
