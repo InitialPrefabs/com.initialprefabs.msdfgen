@@ -68,6 +68,7 @@ namespace InitialPrefabs.Msdf.RenderExample {
                 propertyBlock = new MaterialPropertyBlock();
             }
 
+            [Obsolete]
             public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData) {
                 if (!Settings.IsValid || propertyBlock == null) {
                     return;
