@@ -3,7 +3,7 @@
     "rootNamespace": "InitialPrefabs.Msdf.EditorExtensions",
     "references": [
         "GUID:d8b63aba1907145bea998dd612889d6b",
-        "GUID:1cccf679afa74174ebdbdf19c5b54735"
+        "GUID:8555e558c25e5c74eaf4e5fcd3435134"
     ],
     "includePlatforms": [
         "Editor"
