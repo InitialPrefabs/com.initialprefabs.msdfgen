@@ -10,5 +10,14 @@ namespace InitialPrefabs.Msdf.Runtime {
         [FormerlySerializedAs("FontData")]
         public RuntimeFaceData FaceData;
         public RuntimeGlyphData[] Glyphs;
+
+        public void CopyFrom(SerializedFontData other) {
+            FaceData = other.FaceData;
+            Glyphs = new RuntimeGlyphData[other.Glyphs.Length];
+
+            for (var i = 0; i < other.Glyphs.Length; i++) {
+                Glyphs[i] = other.Glyphs[i];
+            }
+        }
     }
 }

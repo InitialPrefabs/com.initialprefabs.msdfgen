@@ -228,13 +228,25 @@ namespace InitialPrefabs.Msdf.EditorExtensions {
                 NativeMethods.drop_byte_buffer(data.glyph_data);
                 var soPath = savePath[savePath.IndexOf("Assets")..] + $"{font.name}_MSDFAtlas.asset";
 
-                AssetDatabase.CreateAsset(serializedFontData, soPath);
-                AssetDatabase.SaveAssets();
+                var previousAsset = AssetDatabase.LoadAssetAtPath<SerializedFontData>(soPath);
+                if (previousAsset == null) {
 
-                AssetDatabase.ImportAsset(soPath, ImportAssetOptions.ForceUpdate);
+                    AssetDatabase.CreateAsset(serializedFontData, soPath);
+                    AssetDatabase.SaveAssets();
 
-                var relativeAtlasPath = savePath[savePath.IndexOf("Assets")..] + $"{font.name}_MSDFAtlas.png";
-                AssetDatabase.ImportAsset(relativeAtlasPath, ImportAssetOptions.ForceUpdate);
+                    AssetDatabase.ImportAsset(soPath, ImportAssetOptions.ForceUpdate);
+
+                    var relativeAtlasPath = savePath[savePath.IndexOf("Assets")..] + $"{font.name}_MSDFAtlas.png";
+                    AssetDatabase.ImportAsset(relativeAtlasPath, ImportAssetOptions.ForceUpdate);
+                } else {
+                    Debug.Log($"Overwriting {soPath}");
+                    // We have to copy the data
+                    previousAsset.CopyFrom(serializedFontData);
+                    EditorUtility.SetDirty(previousAsset);
+                    // AssetDatabase.SaveAssetIfDirty(previousAsset);
+                    AssetDatabase.SaveAssets();
+                    AssetDatabase.Refresh();
+                }
             });
         }
     }
