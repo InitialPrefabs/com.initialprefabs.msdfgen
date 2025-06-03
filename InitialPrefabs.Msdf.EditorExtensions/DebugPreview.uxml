@@ -1,0 +1,13 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="container" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement name="info" style="flex-grow: 1; max-width: 50%; width: 50%;">
+            <ui:IntegerField label="Unicode" value="42" name="unicode" enabled="false" readonly="false" />
+            <ui:TextField label="Character" placeholder-text="filler text" name="char" enabled="false" readonly="false" />
+            <ui:FloatField label="Advance" value="42" name="advance" enabled="false" readonly="false" />
+            <ui:Vector2Field label="Metrics" name="metrics" enabled="false" />
+            <ui:Vector2Field label="Bearings" name="bearings" enabled="false" />
+            <ui:Vector4Field label="Uvs" name="uvs" enabled="false" />
+        </ui:VisualElement>
+        <ui:Image name="glyph-preview" style="--unity-image: url(&apos;path/to/image&apos;); width: 50%; max-width: 50%;" />
+    </ui:VisualElement>
+</ui:UXML>
