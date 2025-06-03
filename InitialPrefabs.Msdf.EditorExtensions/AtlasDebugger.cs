@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using InitialPrefabs.Msdf.Runtime;
 using UnityEditor;
 using UnityEngine;
@@ -16,7 +18,7 @@ public class AtlasDebugger : EditorWindow {
 
     private readonly List<SerializedFontData> serializedFontDatas = new List<SerializedFontData>();
     private readonly List<string> choices = new List<string>();
-    private readonly List<Image> glyphImages = new List<Image>();
+    private readonly List<VisualElement> glyphContainers = new List<VisualElement>();
 
     private SerializedFontData selectedFontData;
 
@@ -46,6 +48,11 @@ public class AtlasDebugger : EditorWindow {
                 GeneratePreview(root);
             }
         });
+
+        var btn = root.Q<Button>("refresh");
+        btn.RegisterCallback<MouseUpEvent>(callback => {
+            GeneratePreview(root);
+        });
     }
 
     private void GeneratePreview(VisualElement root) {
@@ -61,8 +68,12 @@ public class AtlasDebugger : EditorWindow {
             return;
         }
         var sourceImage = AssetDatabase.LoadAssetAtPath<Texture>(AssetDatabase.GUIDToAssetPath(guids[0]));
-        glyphImages.Clear();
         var preview = root.Q<VisualElement>("preview");
+        var children = preview.Children().ToArray();
+        for (int i = children.Length - 1; i >= 0; i--) {
+            children[i].RemoveFromHierarchy();
+        }
+        glyphContainers.Clear();
         foreach (var glyph in selectedFontData.Glyphs) {
             var container = new VisualElement();
             container.style.flexDirection = FlexDirection.Row;
