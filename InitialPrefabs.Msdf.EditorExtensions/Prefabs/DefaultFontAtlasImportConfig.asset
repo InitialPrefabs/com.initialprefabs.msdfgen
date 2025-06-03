@@ -37,7 +37,7 @@ MonoBehaviour:
       m_VTOnly: 0
       m_IgnoreMipmapLimit: 0
       m_NPOTScale: 0
-      m_sRGBTexture: 1
+      m_sRGBTexture: 0
       m_SpriteMode: 0
       m_SpriteExtrude: 0
       m_SpriteMeshType: 0

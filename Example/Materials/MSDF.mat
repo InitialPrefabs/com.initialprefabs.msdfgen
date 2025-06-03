@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MSDF
-  m_Shader: {fileID: 4800000, guid: df778ce86ea706d4ca703beb3ab66f29, type: 3}
+  m_Shader: {fileID: 4800000, guid: 5ef9d7d3718a67747aff192ce766cd06, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 305f255055ed7774680fa745ddc88f37, type: 3}
+        m_Texture: {fileID: 2800000, guid: 91be1b80181fafc4cac0a1f0a2b7989d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -89,7 +89,7 @@ Material:
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
-    - _Cutoff: 0
+    - _Cutoff: 1
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -110,7 +110,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _UnitRange: 100
+    - _UnitRange: 128
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:

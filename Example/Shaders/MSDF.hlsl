@@ -39,7 +39,8 @@ float median(float r, float g, float b) {
 }
 
 float ScreenPxRange(float2 uv) {
-    float2 unitRange = 100 / _BaseMap_ST.zw;
+    float2 texSize = float2(_BaseMap_TexelSize.z, _BaseMap_TexelSize.w);
+    float2 unitRange = _UnitRange / texSize;
     float2 screenTexSize = 1.0 / fwidth(uv);
     return max(0.5 * dot(unitRange, screenTexSize), 1.0);
 }
@@ -56,11 +57,10 @@ void UnlitPassFragment(
     // What the msdf author recommended. Use a constant screen px range.
     // Should code generate and set the uniform b/c we're in orthographic proj.
     // https://github.com/Chlumsky/msdfgen
-    float pxRange = ScreenPxRange(input.uv);
-    float4 texel = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, input.uv);
+    float3 texel = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, input.uv).rgb;
     float dist = median(texel.r, texel.g, texel.b);
-    float pxDist = pxRange * (dist - 0.5);
-    float opacity = saturate(pxDist + 0.5);
+    float pxRange = ScreenPxRange(input.uv) * (dist - 0.5);
+    float opacity = clamp(pxRange + 0.5, 0.0, 1.0);
     clip(opacity - _Cutoff);
     outColor = float4(input.color.rgb, opacity);
 }

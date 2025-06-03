@@ -5,6 +5,7 @@
 
 CBUFFER_START(UnityPerMaterial)
     float4 _BaseMap_ST;
+    float4 _BaseMap_TexelSize;
     float _UnitRange;
     float _Cutoff;
 CBUFFER_END
