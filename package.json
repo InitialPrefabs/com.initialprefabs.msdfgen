@@ -1,10 +1,10 @@
 {
-    "name": "com.initialprefabs.msdfgen",
+    "name": "com.initialprefabs.msdf",
     "version": "1.0.0",
     "displayName": "MSDF Atlas Gen",
     "description": "Using MSDF to generate font atlases",
-    "unity": "2022.3",
-    "unityRelease": "45",
+    "unity": "6",
+    "unityRelease": "1",
     "documentationUrl": "https://github.com/InitialPrefabs/InitialPrefabs.Msdf",
     "changelogUrl": "",
     "licensesUrl": "",
