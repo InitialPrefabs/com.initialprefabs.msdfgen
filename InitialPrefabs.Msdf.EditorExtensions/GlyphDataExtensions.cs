@@ -2,9 +2,13 @@
 using Unity.Mathematics;
 
 namespace InitialPrefabs.Msdf.EditorExtensions {
-    internal static class GlyphDataExtensions {
-        public static RuntimeGlyphData ToRuntime(this ref GlyphData d) {
-            return new RuntimeGlyphData {
+    
+    internal static class GlyphDataExtensions
+    {
+        public static RuntimeGlyphData ToRuntime(this ref GlyphData d)
+        {
+            return new RuntimeGlyphData
+            {
                 Unicode = d.unicode,
                 Char = (char)d.unicode,
                 Advance = d.advance,

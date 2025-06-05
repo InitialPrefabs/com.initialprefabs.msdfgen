@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e112fdf73a5213f4d83f791c1ee83905, type: 3}
+  m_Script: {fileID: 11500000, guid: 68c874a815c68514e92636fe8858d380, type: 3}
   m_Name: DefaultFontAtlasImportConfig
   m_EditorClassIdentifier: 
   IsPrimary: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
       m_IgnorePlatformSupport: 0
       m_MaxTextureSize: 2048
       m_ResizeAlgorithm: 0
-      m_TextureFormat: 3
+      m_TextureFormat: 4
       m_TextureCompression: 0
       m_CompressionQuality: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0

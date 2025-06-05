@@ -9,19 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1df1c9fe59772ac4d9a7f4366e465c13, type: 3}
+  m_Script: {fileID: 11500000, guid: 054c12cab3cf276479e716eff6369cf1, type: 3}
   m_Name: GlyphRenderFeature
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    FontSize: 132
-    TextToRender: 01234
-    FontData: {fileID: 11400000, guid: 7eb357c69c98c1244b514f4e18c220d2, type: 2}
-    Material: {fileID: 2100000, guid: cbb9df6ebeade864a9ee665803d60ed9, type: 2}
-    FontTexture: {fileID: 2800000, guid: 91be1b80181fafc4cac0a1f0a2b7989d, type: 3}
+    FontSize: 85
+    TextToRender: ABCDefgHIJklmNOPqrsTUVwxyZ
+    FontData: {fileID: 11400000, guid: 00dbeb0ce9831844c9f293191ca00cb2, type: 2}
+    Material: {fileID: 2100000, guid: 863ec39b092c2ad45bb5b1f3c6644755, type: 2}
+    FontTexture: {fileID: 2800000, guid: 60faf684d4efdcf40a15044ff48e0f18, type: 3}
     StartPos:
-      x: 0
-      y: 1080
+      x: 500
+      y: 500
     Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &11400000
 MonoBehaviour:

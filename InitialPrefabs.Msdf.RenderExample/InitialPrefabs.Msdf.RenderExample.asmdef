@@ -2,10 +2,10 @@
     "name": "InitialPrefabs.Msdf.RenderExample",
     "rootNamespace": "InitialPrefabs.Msdf.RenderExample",
     "references": [
-        "Unity.Mathematics",
-        "Unity.RenderPipelines.Core.Runtime",
-        "Unity.RenderPipelines.Universal.Runtime",
-        "InitialPrefabs.Msdf.Runtime"
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9",
+        "GUID:d6f441ba245333e4e8012dc8e3e06424"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

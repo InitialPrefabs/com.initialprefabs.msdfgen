@@ -2,10 +2,10 @@
     "name": "InitialPrefabs.Msdf.Tests",
     "rootNamespace": "InitialPrefabs.Msdf.Tests",
     "references": [
-        "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner",
-        "InitialPrefabs.Msdf.Runtime",
-        "InitialPrefabs.Msdf.EditorExtensions"
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:d6f441ba245333e4e8012dc8e3e06424",
+        "GUID:a29a04f538a8a3b4cae67c3a6b18b19d"
     ],
     "includePlatforms": [
         "Editor"

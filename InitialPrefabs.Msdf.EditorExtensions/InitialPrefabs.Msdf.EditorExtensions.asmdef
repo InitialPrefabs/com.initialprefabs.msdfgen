@@ -2,8 +2,8 @@
     "name": "InitialPrefabs.Msdf.EditorExtensions",
     "rootNamespace": "InitialPrefabs.Msdf.EditorExtensions",
     "references": [
-        "Unity.Mathematics",
-        "InitialPrefabs.Msdf.Runtime"
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:d6f441ba245333e4e8012dc8e3e06424"
     ],
     "includePlatforms": [
         "Editor"
